@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #F5F5F5;
+}
+
+nav {
+    width: 100%;
+    padding: 20px 0;
+    background-color: #5296D5;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.title {
+    font-size: 30px;
+    font-weight: 600;
+    color: #222222;
+}
+
+.content {
+    background-color: #FFFFFF;
+    width: 80%;
+    padding: 80px 0;
+    margin: 40px auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+}
+
+.text {
+    font-size: 14px;
+    font-weight: 400;
+    color: #222222;
+}
+
+.option {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+}
+
+.option button {
+    width: 80%;
+    padding: 10px 0;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #437EB4;
+    transition: all 0.2s;
+}
+
+.option button:hover {
+    background-color: #F5F5F5;
+}
+
+.active {
+    background-color: #437EB4 !important;
+    color: white !important;
+    font-weight: 500 !important;
+}
+
+#persegi, #persegi-panjang {
+    width: 80%;
+    margin: auto;
+}
+
+.luas, .keliling {
+    width: 100%;
+    border: #437EB4 1px solid;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+}
+
+.keliling {
+    margin-top: 40px;
+}
+
+.header-content {
+    width: 100%;
+    background-color: #437EB4;
+    padding: 12px 0;
+}
+
+.inner-content {
+    width: 100%;
+    padding: 40px 0;
+}
+
+.top-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    margin: auto;
+}
+
+input {
+    width: 80%;
+    padding: 6px;
+    margin: 20px 0;
+}
+
+.hitung {
+    padding: 6px 20px;
+    outline: none;
+    border: none;
+    background-color: #437EB4;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #FFFFFF;
+    transition: all 0.2s;
+}
+
+.reset {
+    padding: 6px 20px;
+    outline: none;
+    border: none;
+    background-color: #E5B05F;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #FFFFFF;
+    transition: all 0.2s;
+}

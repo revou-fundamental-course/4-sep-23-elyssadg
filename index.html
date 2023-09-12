@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katik</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <nav>
+        <h1 class="title" style="color: #FFFFFF;">Katik <span style="font-size: 16px; font-weight: 600; color: #E5B05F;">Kalkulator Matematik</span></h1>
+    </nav>
+
+    <div class="content">
+        <h1 class="title">Welcome to Katik</h1>
+        <div>
+            <p class="text">Hai sobat, selamat datang di Katik 😊</p>
+            <p class="text">Sebuah web apps sederhana yang berfungsi untuk menghitung nilai luas dan keliling bangun datar</p>
+        </div>
+        <div class="option">
+            <button id="btn-persegi" class="active" onclick="hitungPersegi()">Persegi</button>
+            <button id="btn-persegi-panjang" onclick="hitungPersegiPanjang()">Persegi Panjang</button>
+        </div>
+        <div id="persegi">
+            <div class="luas">
+                <div class="header-content">
+                    <h1 class="title" style="color: #FFFFFF;">Luas Persegi</h1>
+                </div>
+                <div class="inner-content">
+                    <div class="top-content">
+                        <div style="width: 150px; height: 150px; border: #E5B05F 2px solid;"></div>
+                        <p class="text" style="margin-top: 20px;">Rumus Luas Persegi</p>
+                        <p style="font-size: 16px; font-weight: 600; margin: 12px 0;">L = S x S</p>
+                        <p class="text">Keterangan:</p>
+                        <p class="text">L = Luas</p>
+                        <p class="text">S = Sisi</p>
+                    </div>
+                    <hr style="width: 100%; color: rgba(0, 0, 0, 0.1); margin: 20px 0;">
+                    <div class="input-form">
+                        <h1 class="title">Hitung Luas Persegi</h1>
+                        <input type="number" placeholder="Nilai sisi" id="sisi-luas"><br>
+                        <div class="text" id="luas-persegi" style="margin-bottom: 20px; display: none;">
+                            L = S x S
+                        </div>
+                        <button class="hitung" onclick="hitungLuasPersegi()">Hitung</button>
+                        <button class="reset" onclick="resetLuasPersegi()">Reset</button>
+                    </div>
+                </div>
+            </div>
+            <div class="keliling">
+                <div class="header-content">
+                    <h1 class="title" style="color: #FFFFFF;">Keliling Persegi</h1>
+                </div>
+                <div class="inner-content">
+                    <div class="top-content">
+                        <div style="width: 150px; height: 150px; border: #E5B05F 2px solid;"></div>
+                        <p class="text" style="margin-top: 20px;">Rumus Keliling Persegi</p>
+                        <p style="font-size: 16px; font-weight: 600; margin: 12px 0;">K = 4 x S</p>
+                        <p class="text">Keterangan:</p>
+                        <p class="text">K = Keliling</p>
+                        <p class="text">S = Sisi</p>
+                    </div>
+                    <hr style="width: 100%; color: rgba(0, 0, 0, 0.1); margin: 20px 0;">
+                    <div class="input-form">
+                        <h1 class="title">Hitung Keliling Persegi</h1>
+                        <input type="number" placeholder="Nilai sisi" id="sisi-keliling"><br>
+                        <div class="text" id="keliling-persegi" style="margin-bottom: 20px; display: none;">
+                            L = S x S
+                        </div>
+                        <button class="hitung" onclick="hitungKelilingPersegi()">Hitung</button>
+                        <button class="reset" onclick="resetKelilingPersegi()">Reset</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="persegi-panjang" style="display: none;">
+            <div class="luas">
+                <div class="header-content">
+                    <h1 class="title" style="color: #FFFFFF;">Luas Persegi Panjang</h1>
+                </div>
+                <div class="inner-content">
+                    <div class="top-content">
+                        <div style="width: 200px; height: 100px; border: #E5B05F 2px solid;"></div>
+                        <p class="text" style="margin-top: 20px;">Rumus Luas Persegi Panjang</p>
+                        <p style="font-size: 16px; font-weight: 600; margin: 12px 0;">L = P x l</p>
+                        <p class="text">Keterangan:</p>
+                        <p class="text">L = Luas</p>
+                        <p class="text">P = Panjang</p>
+                        <p class="text">l = Lebar</p>
+                    </div>
+                    <hr style="width: 100%; color: rgba(0, 0, 0, 0.1); margin: 20px 0;">
+                    <div class="input-form">
+                        <h1 class="title">Hitung Luas Persegi Panjang</h1>
+                        <div>
+                            <input type="number" placeholder="Nilai panjang" id="panjang-luas" style="margin-bottom: 10px;"><br>
+                            <input type="number" placeholder="Nilai lebar" id="lebar-luas" style="margin-top: 0;"><br>
+                        </div>
+                        <div class="text" id="luas-persegi-panjang" style="margin-bottom: 20px; display: none;">
+                            L = P x l
+                        </div>
+                        <button class="hitung" onclick="hitungLuasPersegiPanjang()">Hitung</button>
+                        <button class="reset" onclick="resetLuasPersegiPanjang()">Reset</button>
+                    </div>
+                </div>
+            </div>
+            <div class="keliling">
+                <div class="header-content">
+                    <h1 class="title" style="color: #FFFFFF;">Keliling Persegi Panjang</h1>
+                </div>
+                <div class="inner-content">
+                    <div class="top-content">
+                        <div style="width: 200px; height: 100px; border: #E5B05F 2px solid;"></div>
+                        <p class="text" style="margin-top: 20px;">Rumus Keliling Persegi Panjang</p>
+                        <p style="font-size: 16px; font-weight: 600; margin: 12px 0;">K = 2 x (P + l)</p>
+                        <p class="text">Keterangan:</p>
+                        <p class="text">K = Keliling</p>
+                        <p class="text">P = Panjang</p>
+                        <p class="text">l = Lebar</p>
+                    </div>
+                    <hr style="width: 100%; color: rgba(0, 0, 0, 0.1); margin: 20px 0;">
+                    <div class="input-form">
+                        <h1 class="title">Hitung Keliling Persegi Panjang</h1>
+                        <div>
+                            <input type="number" placeholder="Nilai panjang" id="panjang-keliling" style="margin-bottom: 10px;"><br>
+                            <input type="number" placeholder="Nilai lebar" id="lebar-keliling" style="margin-top: 0;"><br>
+                        </div>
+                        <div class="text" id="keliling-persegi-panjang" style="margin-bottom: 20px; display: none;">
+                            L = S x S
+                        </div>
+                        <button class="hitung" onclick="hitungKelilingPersegiPanjang()">Hitung</button>
+                        <button class="reset" onclick="resetKelilingPersegiPanjang()">Reset</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
