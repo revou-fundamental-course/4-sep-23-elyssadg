@@ -22,7 +22,7 @@ function hitungKelilingPersegi() {
     const result = document.getElementById('keliling-persegi');
     const sisi = document.getElementById('sisi-keliling').value;
 
-    if (parseInt(sisi) || sisi == "") {
+    if (parseInt(sisi) < 0 || sisi == "") {
         alert('Sisi harus > 0');
         return;
     }
